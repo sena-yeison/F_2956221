@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/bg-01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+header nav {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(99, 99, 98);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    opacity: .8;
+}
+
+header nav img {
+    width: 8%;
+}
+
+header nav ul {
+    display: flex;
+
+}
+
+nav ul li {
+    margin: 0 20px;
+    list-style: none;
+    padding: 8px;
+}
+
+nav ul li:hover {
+    border-bottom: 3px solid yellow;
+    border-right: 3px solid yellow;
+    transition: .5s;
+}
+
+
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* Seccion del Banner */
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.banner img {
+    width: 32%;
+}
+
+
+.banner .title {
+    width: 50%;
+}
+
+.title h1 {
+    font-size: 6em;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title h1 small {
+    color: white;
+}
+
+
+
+
+/* SECCION DE SERVICIOS */
+.services {
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: space-around;
+    padding: 3em;
+}
+
+
+.services article {
+    width: 280px;
+    height: 350px;
+    margin: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: orange;
+}

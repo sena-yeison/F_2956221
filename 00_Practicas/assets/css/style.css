@@ -3,396 +3,148 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.nav_responsive {
+    display: none;
+}
+
+.label_check {
+    display: none;
+}
+
+.input_check {
+    display: none;
 }
 
 header {
     width: 100%;
     height: 100vh;
-    background-image: url('../images/bg-01.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 2em;
+    background-image: url('https://images.unsplash.com/photo-1718174405504-6c65225786de?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
-
-.icon_check {
-    display: none;
-}
-
-
-header nav {
-    width: 97%;
-    height: 80px;
-    background-color: rgb(99, 99, 98);
+nav {
+    width: 90%;
+    height: 4em;
+    background: black;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    padding: 10px 30px;
-    opacity: .8;
-    margin: 0 auto;
+    border-bottom: 2px solid blue;
 }
 
-header nav img {
-    width: 8%;
-}
 
-header nav ul {
+nav ul {
     display: flex;
-
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin-right: 2em;
     list-style: none;
-    padding: 8px;
 }
-
-nav ul li:hover {
-    border-bottom: 3px solid yellow;
-    border-right: 3px solid yellow;
-    transition: .5s;
-}
-
-
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-
-/* Responsive nav y banner */
-@media(width <=967px) {
-    nav ul{
-        
-    }
+    color: white;
 }
 
 
 
+.message {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    margin-left: 3em;
+}
+
+.message h2 {
+    font-size: 4em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 10px 10px 8px blue, 3px 3px 3px rgb(0, 0, 0);
+    color: white;
+}
 
 
+.servicios {
+    width: 100%;
+    height: 200vh;
+    background-color: gray;
+}
 
-    /* Seccion del Banner */
-    .banner {
+/* Responsive */
+
+@media(width<=940px) {
+
+
+    .nav_responsive {
+        display: block;
         width: 100%;
-        height: 100vh;
+        height: 4em;
+        background-color: black;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        padding: 3px 1em;
+        position: fixed;
+        z-index: 2;
     }
 
-
-
-    .banner img {
-        width: 32%;
+    .nav_responsive img {
+        width: 15%;
     }
 
-
-    .banner .title {
-        width: 50%;
-    }
-
-    .title h1 {
-        font-size: 6em;
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    .title h1 small {
-        color: white;
-    }
-
-
-
-
-
-
-    /* SECCION DE SERVICIOS */
-    .services {
-        width: 100%;
-        /* background-color: rgb(247, 247, 247); */
-        display: flex;
-        padding: 3em;
-        flex-direction: column;
-    }
-
-    .services .title {
-        width: 40%;
-        border-bottom: 2px solid blue;
-        margin-bottom: 2em;
-    }
-
-    .services h2 {
-        color: rgb(0, 0, 0);
-    }
-
-    .services .servis {
+    .btn_input_check{
         display: flex;
         justify-content: space-around;
-
+        align-items: center;
+        
+    } 
+    
+    .label_check {
+        display: block;
+        color: rgb(255, 255, 255);
     }
 
-    .services article {
-        width: 280px;
-        height: 350px;
-        margin: 5px;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-        background-color: orange;
+   
+
+    header {
+        padding-top: 0;
     }
 
-
-
-    /* SECCION DEL MENSAJE */
-    .message {
-        width: 90%;
-        height: 40vh;
-        padding: 1em 10em;
-        display: flex;
+    nav {
+        width: 100%;
+        height: 100vh;
         justify-content: center;
-        background-image: url('../images/bg-01.jpg');
-        background-size: cover;
-        background-position: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-
-    .message h2 {
-        font-family: "Poetsen One", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: white;
-        font-size: 4em;
-        text-shadow: 2px -4px red;
-    }
-
-
-    .blog {
-        width: 90%;
-        margin: 2em auto;
-    }
-
-
-    .blog div {
-        width: 100%;
-        height: 50vh;
-        display: flex;
-        justify-content: space-around;
-        margin: 2em 0;
-    }
-
-    .blog div article {
-        width: 50%;
-        height: 50vh;
-        margin: 1em;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: fixed;
+        left: -100%;
+        opacity: .8;
+
+    }
+
+    nav ul {
         flex-direction: column;
     }
 
-    .blog div article h2 {
-        font-size: 2em;
-        line-height: 2em;
-        font-family: "Poetsen One", sans-serif;
-    }
-
-    .blog div article p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1em;
-        line-height: 2em;
+    nav ul li {
+        margin-bottom: 2em;
+        font-size: 1.3em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 2px 1.3em;
     }
 
 
-    .bg-2 {
-        background-image: url('../images/bg-2.jpg');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .bg-3 {
-        background-image: url('../images/bg-2.jpg');
-        background-size: cover;
-        background-position: center;
+    #btn_checked:checked~nav {
+        left: 0;
+        transition: all .5s;
     }
 
 
 
-
-    /* SECCION DE CONTACTANOS */
-
-    .contacts {
-        width: 90%;
-        display: flex;
-        margin: 0 auto;
-    }
-
-
-    .contacts div {
-        width: 50%;
-        height: 80vh;
-        margin: .2em;
-    }
-
-    form {
-        padding: 20px;
-    }
-
-    .form-control {
-        width: 100%;
-        margin: 2em 0;
-
-    }
-
-    .form-control label {
-        width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1em;
-    }
-
-    .form-control input {
-        width: 100%;
-        height: 3em;
-        border: none;
-        border-bottom: 1px solid black;
-        font-size: 13px;
-    }
-
-    .form-control textarea {
-        width: 100%;
-        resize: none;
-        height: 5em;
-        border: none;
-        border-bottom: 1px solid black;
-    }
-
-    .btn {
-        width: 100%;
-        display: flex;
-        justify-content: end;
-    }
-
-
-    .btn button {
-        width: 40%;
-        height: 4em;
-        background-color: blue;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
-
-    .btn button:hover {
-        background-color: rgb(84, 84, 227);
-        color: white;
-    }
-
-
-    /* SECCION DEL FOOTER */
-
-    footer {
-        width: 100%;
-        height: 50vh;
-        background-color: black;
-    }
-
-
-
-
-
-
-    /* Responsive nav y banner */
-    @media(width <=967px) {
-
-        header {
-            padding-top: 0;
-        }
-
-        header nav {
-            position: fixed;
-            width: 100%;
-            
-            opacity: 5;
-        }
-
-
-        header nav img {
-            width: 16%;
-        }
-
-        header nav ul {
-            width: 100%;
-            height: 100vh;
-            background-color: black;
-            position: absolute;
-            left: -100%;
-            top: 0px;
-            flex-direction: column;
-            padding-top: 3em;
-        }
-
-
-         header nav ul li{
-           margin-top: 3em;
-        }
-
-        .icon_check {
-            color: white;
-            font-size: 2em;
-            display: block;
-        }
-
-
-
-        .banner img {
-            display: none;
-        }
-
-        .banner {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .banner h1 {
-            color: blue;
-            font-size: 3em;
-        }
-
-
-        .services .servis {
-            flex-direction: column;
-        }
-
-        .services .servis article {
-            width: 100%;
-            margin: 5px auto;
-        }
-
-
-
-        .blog {
-            width: 70%;
-            margin: none;
-            text-align: justify;
-            padding: 0;
-        }
-
-        .blog div {
-            flex-direction: column;
-            justify-content: center;
-
-        }
-
-
-
-        .blog div article {
-            width: 100%;
-            height: 50vh;
-            margin: none;
-        }
-    }
+}

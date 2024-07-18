@@ -3,7 +3,7 @@
 // // Tipos
 
 // /*
-//     LET
+//     LET =>
 //     VAR
 //     CONST
 
@@ -45,8 +45,7 @@
 
 // if (valor2 > valor3) {
 //     console.log( valor2, "Es mayor");
-// }
-//  if(valor1 < valor3) {
+// }else if(valor1 < valor3) {
 //     console.log( valor3 , "Es mayor");
 // }
 //  if (valor1 > valor2) {
@@ -55,6 +54,15 @@
 
 // SWITCH -> SELECCIÓN DE UNA OPCION
 
+let menu = `
+  1. Case 1
+  2. Case 2
+  3. Case 3
+  4. Case 4
+  5. Case 5
+  6. Case 6
+`;
+alert(menu);
 let opcion = parseInt(prompt("Ingrese la opción"));
 
 switch (opcion) {
@@ -101,3 +109,8 @@ switch (opcion) {
     break;
   default: console.log("Opcion invalida");
 }
+
+
+
+
+//  CICLOS 

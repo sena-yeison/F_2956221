@@ -147,4 +147,15 @@ function ListarDatosT(datas, nombrePersonalizado) {
   }
 }
 
+
+// FUNCIONES PARA CIUDADES
+const RegistroGenerico = (arreglo) => {
+    let cantidad = parseInt(prompt(`¿Cuantas ciudades desea registrar?`)); //5
+    for (let i = 0; i < cantidad; i++) {
+      arreglo[i] = prompt(`Ingrese el nombre de la ciudad No. ${i + 1}`);
+    }
+    alert("Ciudades registradas exitosamente....");
+  };
+
+
 start();

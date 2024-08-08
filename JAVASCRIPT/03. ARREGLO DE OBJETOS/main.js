@@ -21,34 +21,6 @@ const start = () => {
         listado();
         break;
       case 3:
-        do {
-          opcUpdate = parseInt(
-            prompt(`1. Nombre
-                          2. Apellidos
-                          3. Dirección
-                          4. Telefono
-                          5. Estado
-                          6. Salir`)
-          );
-
-          switch (opcUpdate) {
-            case 1:
-              break;
-            case 2:
-              break;
-            case 3:
-              break;
-            case 4:
-              break;
-            case 5:
-              break;
-            case 6:
-              break;
-            default:
-              break;
-          }
-        } while (opcUpdate != 6);
-        actualizarDatos();
         break;
       case 4:
         alert("Adios...");

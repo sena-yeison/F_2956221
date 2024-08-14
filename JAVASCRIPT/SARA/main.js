@@ -27,8 +27,9 @@ const start = () => {
                     1. Registro
                     2. Listado de aprendices
                     3. Actualización de aprendiz
-                    4. Anular matricula del aprendiz
-                    5. Salir`)
+                    4. Eliminar aprendiz
+                    5. Anular aprendiz
+                    6. Salir`)
           );
 
           switch (opcionAprendices) {
@@ -41,10 +42,20 @@ const start = () => {
             case 3:
               ActualizarDatosAprendiz();
               break;
+            case 4:
+                EliminarDatosAprendiz()
+                break;
+            case 5:
+              AnularAprendiz()
+              break;
+              case 6:
+              AnularAprendiz()
+              break;
             default:
               break;
+            
           }
-        } while (opcionAprendices != 5);
+        } while (opcionAprendices != 6);
         break;
       case 2:
         break;
@@ -191,6 +202,64 @@ function ActualizarDatosAprendiz() {
     
   }
 }
+
+// Función de eliminar un usuario e arreglo. 
+function EliminarDatosAprendiz(){
+  if (ListadoAprendices.length < 1) {
+    alert("No tienes aprendices registrados");
+  } else {
+    let documento = prompt("Ingrese el documento del aprendiz a actualizar.");
+    let i = 0, posicion=0;
+    let dataUsuarios = " Código  |  Documento    |   Nombre y apellidos \n";
+    ListadoAprendices.forEach((element) => {
+      if (documento == element.documento) {
+        dataUsuarios += `     ${i}    |    ${element.documento}   |   ${element.nombre} ${element.apellidos}`;
+        posicion= i;
+      }
+      i++;
+    });
+
+    alert(dataUsuarios);
+    let respuesta = parseInt(prompt(`¿Estás seguro de eliminar al aprendíz?
+      1. Si
+      2. No`));
+
+      if(respuesta == 1){
+        ListadoAprendices.splice(posicion, 1);
+      }
+  }
+}
+
+// Inactivar al usuario
+// Función de eliminar un usuario e arreglo. 
+function AnularAprendiz(){
+  if (ListadoAprendices.length < 1) {
+    alert("No tienes aprendices registrados");
+  } else {
+    let documento = prompt("Ingrese el documento del aprendiz a actualizar.");
+    let i = 0, posicion=0;
+    let dataUsuarios = " Código  |  Documento    |   Nombre y apellidos \n";
+    ListadoAprendices.forEach((element) => {
+      if (documento == element.documento) {
+        dataUsuarios += `     ${i}    |    ${element.documento}   |   ${element.nombre} ${element.apellidos}`;
+        posicion= i;
+      }
+      i++;
+    });
+
+    alert(dataUsuarios);
+    let respuesta = parseInt(prompt(`¿Estás seguro de anular al aprendíz?
+      1. Si
+      2. No`));
+
+      if(respuesta == 1){
+        ListadoAprendices[posicion].estadoPrograma = false;
+      }
+  }
+}
+
+
+
 
 // Arrancamos el proyecto
 start();

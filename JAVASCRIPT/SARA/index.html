@@ -1,11 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
-    <script src="main.js"></script>
+    
+    <div class="container-fluid">
+        <div class="row w-100 pt-4">
+            <div class="col-5 vh-100 d-flex aling-items-center flex-column align-items-center justify-content-center">
+                <div class="card border">
+                    <div class="card-header">REGISTRO DE APRENDICES</div>
+                </div>
+                <div class="card-body">
+                        <div>
+                            <label for="" class="label-control">Documento</label>
+                            <input id="documento" type="text" class="form-control" placeholder="Documento">
+                        </div>
+                        <div>
+                            <label for="" class="label-control">Nombre</label>
+                            <input id="nombre" type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div>
+                            <label for="" class="label-control">Apellidos</label>
+                            <input id="apellidos" type="text" class="form-control" placeholder="Apellidos">
+                        </div>
+                        <div>
+                            <label for="" class="label-control">Sexo</label>
+                            <select id="sexo" type="text" class="form-control">
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="" class="label-control">Programa</label>
+                            <input id="programa" type="text" class="form-control" placeholder="Programa">
+                        </div>
+                        <div>
+                            <label for="" class="label-control">Trimestre</label>
+                            <input id="trimestre" type="text" class="form-control" placeholder="Trimestre">
+                        </div>
+                        <div>
+                            <label for="" class="label-control">Dirección</label>
+                            <input id="direccion" type="text" class="form-control" placeholder="Dirección">
+                        </div>
+                        <div class="mt-3">
+                            <button onclick="RegistroAprendiz()" class="btn btn-primary col-12">Guardar</button>
+                        </div>
+                </div>
+            </div>
+            <div class="col-7 vh-100">
+                <h2>Listado de aprendices</h2><hr>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Programa</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Juan Castaño Pajaro</td>
+                        <td>ADSO</td>
+                        <td>Medellín</td>
+                        <td><button class="btn btn-success">Activo</button></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Ver</button>
+                                <button type="button" class="btn btn-success">Editar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                              </div>
+                        </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/aprendiz.controller.js"></script>
+    <script src="assets/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
+
 </html>

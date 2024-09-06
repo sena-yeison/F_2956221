@@ -13,78 +13,76 @@
     
     <div class="container-fluid">
         <div class="row w-100 pt-4">
-            <div class="col-5 vh-100 d-flex aling-items-center flex-column align-items-center justify-content-center">
+            <div class="col-3 vh-100 d-flex aling-items-center flex-column  justify-content-center">
                 <div class="card border">
                     <div class="card-header">REGISTRO DE APRENDICES</div>
-                </div>
-                <div class="card-body">
-                        <div>
-                            <label for="" class="label-control">Documento</label>
-                            <input id="documento" type="text" class="form-control" placeholder="Documento">
-                        </div>
-                        <div>
-                            <label for="" class="label-control">Nombre</label>
-                            <input id="nombre" type="text" class="form-control" placeholder="Nombre">
-                        </div>
-                        <div>
-                            <label for="" class="label-control">Apellidos</label>
-                            <input id="apellidos" type="text" class="form-control" placeholder="Apellidos">
-                        </div>
-                        <div>
-                            <label for="" class="label-control">Sexo</label>
-                            <select id="sexo" type="text" class="form-control">
-                                <option value="Hombre">Hombre</option>
-                                <option value="Mujer">Mujer</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="" class="label-control">Programa</label>
-                            <input id="programa" type="text" class="form-control" placeholder="Programa">
-                        </div>
-                        <div>
-                            <label for="" class="label-control">Trimestre</label>
-                            <input id="trimestre" type="text" class="form-control" placeholder="Trimestre">
-                        </div>
-                        <div>
-                            <label for="" class="label-control">Dirección</label>
-                            <input id="direccion" type="text" class="form-control" placeholder="Dirección">
-                        </div>
-                        <div class="mt-3">
-                            <button onclick="RegistroAprendiz()" class="btn btn-primary col-12">Guardar</button>
-                        </div>
+                    <div class="card-body">
+
+                            <div>
+                                <label for="" class="label-control">Documento</label>
+                                <input required id="documento" onchange="validatorDocumentExisting()" onkeyup="validatorLength()" type="number" class="form-control" placeholder="Documento">
+                            </div>
+                            <div>
+                                <label for="" class="label-control">Nombre</label>
+                                <input required id="nombre" type="text" name="hola" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div>
+                                <label for="" class="label-control">Apellidos</label>
+                                <input required id="apellidos" type="text" class="form-control" placeholder="Apellidos">
+                            </div>
+                            <div>
+                                <label for="" class="label-control">Sexo</label>
+                                <select required id="sexo" type="text" class="form-control">
+                                    <option selected>seleccione...</option>
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="" class="label-control">Programa</label>
+                                <input required id="programa" type="text" class="form-control" placeholder="Programa">
+                            </div>
+                            <div>
+                                <label for="" class="label-control">Trimestre</label>
+                                <input required id="trimestre" type="text" class="form-control" placeholder="Trimestre">
+                            </div>
+                            <div>
+                                <label for="" class="label-control">Dirección</label>
+                                <input required id="direccion" type="text" class="form-control" placeholder="Dirección">
+                            </div>
+                            
+                            <div class="mt-3">
+                                <input required type="button" onclick="RegistroAprendiz()" class="btn btn-primary col-12" value="Guardar"/>
+                            </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-7 vh-100">
-                <h2>Listado de aprendices</h2><hr>
-                <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nombres</th>
-                        <th scope="col">Programa</th>
-                        <th scope="col">Dirección</th>
-                        <th scope="col">Estado</th>
-                        <th scope="col">Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Juan Castaño Pajaro</td>
-                        <td>ADSO</td>
-                        <td>Medellín</td>
-                        <td><button class="btn btn-success">Activo</button></td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary">Ver</button>
-                                <button type="button" class="btn btn-success">Editar</button>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                              </div>
-                        </td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
+            <div class="col-9 vh-100 mt-4 d-flex aling-items-center flex-column  ">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Listado de aprendices</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table" id="tableAprendices">
+                            <thead>
+                              <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Documento</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Programa</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tbody-table">
+                              <tr >
+                                
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

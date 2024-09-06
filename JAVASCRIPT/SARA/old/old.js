@@ -1,55 +1,95 @@
 // Defino los arreglos
 let ListadoAprendices = [];
-let ListadoProgramas = [{ codigo: 133241242, nombre: "ADSO" }];
+let ListadoProgramas = [
+  {codigo: 133241242, nombre:"ADSO"}
+];
 
-// Listado de aprendiz
-function listadoTotalAprendices() {
-  let tbody = document.getElementById("tbody-table");
-  tbody.innerHTML = "";
+// Función de inicio
+const start = () => {
+  let opcionStart = 0;
+  let opcionAprendices = 0;
+  let opcionActualizacionAprendices = 0;
+  do {
+    opcionStart = parseInt(
+      prompt(`Bienvenido a SARA 
+            Sistema Automatizado de Registro de Aprendices
+            
+            1. Aprendices
+            2. Programas
+            3. Salir`)
+    );
 
-  ListadoAprendices.forEach((element, index) => {
-    let filaTr = document.createElement("tr");
-    filaTr.innerHTML = `
-                        <td>${index}</td>
-                        <td>${element.documento}</td>
-                        <td>${element.nombre}</td>
-                        <td>${element.programa}</td>
-                        <td>${element.direccion}</td>
-                        <td><button class="btn btn-${element.estadoPrograma ? "success" : "danger"}">
-                            ${element.estadoPrograma ? "Activo" : "Inactivo"}</button>
-                        </td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary">Ver</button>
-                                <button type="button" class="btn btn-success">Editar</button>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                              </div>
-                        </td>`;
+    switch (opcionStart) {
+      case 1:
+        do {
+          opcionAprendices = parseInt(
+            prompt(`Bienvenido a SARA 
+                    Sistema Automatizado de Registro de Aprendices
+                    
+                    1. Registro
+                    2. Listado de aprendices
+                    3. Actualización de aprendiz
+                    4. Eliminar aprendiz
+                    5. Anular aprendiz
+                    6. Salir`)
+          );
 
-    tbody.appendChild(filaTr);
-  });
-}
+          switch (opcionAprendices) {
+            case 1:
+              RegistroAprendiz();
+              break;
+            case 2:
+              listadoTotalAprendices();
+              break;
+            case 3:
+              ActualizarDatosAprendiz();
+              break;
+            case 4:
+              EliminarDatosAprendiz();
+              break;
+            case 5:
+              AnularAprendiz();
+              break;
+            case 6:
+              break;
+            default:
+              break;
+          }
+        } while (opcionAprendices != 6);
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+      default:
+        break;
+    }
+  } while (opcionStart != 3);
+};
 
-listadoTotalAprendices();
+/*
+----------------------------------------------
+METODOS O FUNCIONES
+----------------------------------------------
+*/
 
-
-
-
+// METODOS DEL APRENDIZ
 
 // Registro de aprendiz
 function RegistroAprendiz() {
-  if (ListadoProgramas.length < 1) {
-    errorAlert("No tienes programas registrados");
-  } else {
-    let documento = document.getElementById("documento").value;
-    let nombre = document.getElementById("nombre").value;
-    let apellidos = document.getElementById("apellidos").value;
-    let sexo = document.getElementById("sexo").value;
-    let programa = document.getElementById("programa").value;
-    let trimestre = document.getElementById("trimestre").value;
-    let direccion = document.getElementById("direccion").value;
-    let estadoPrograma = false;
 
+  if(ListadoProgramas.length < 1){
+    errorAlert('No tienes programas registrados');
+  }else{
+      let documento = document.getElementById('documento').value;
+      let nombre = document.getElementById('nombre').value;
+      let apellidos = document.getElementById('apellidos').value;
+      let sexo = document.getElementById('sexo').value;
+      let programa = document.getElementById('programa').value;
+      let trimestre = document.getElementById('trimestre').value;
+      let direccion = document.getElementById('direccion').value;
+      let estadoPrograma = true;
+  
       let datosAprendiz = {
         documento,
         nombre,
@@ -60,50 +100,49 @@ function RegistroAprendiz() {
         direccion,
         estadoPrograma
       };
+  
       ListadoAprendices.push(datosAprendiz);
-      successAlert("Aprendiz");
-      clearFor();
-      listadoTotalAprendices();
-  }
+
+      clearRegisterAprendiz();
+      successAlert('Aprendiz')
+      };
 }
 
+function clearRegisterAprendiz(){
+  document.getElementById('documento').value = "";
+  document.getElementById('nombre').value = "";
+  document.getElementById('apellidos').value = "";
+  document.getElementById('sexo').value = "";
+  document.getElementById('programa').value = "";
+  document.getElementById('trimestre').value = "";
+  document.getElementById('direccion').value = "";
+}
 
-function validatorDocumentExisting(){
-  let documento = document.getElementById("documento").value;
-
-  let userExisting = false;
-  ListadoAprendices.forEach((element, index) => {
-    if (documento == element.documento) {
-      userExisting = true;
-    }
+// Listado de aprendiz
+function listadoTotalAprendices() {
+  let listadoTotal = "";
+  ListadoAprendices.forEach((element) => {
+    listadoTotal += `
+        Documento: ${element.documento}
+        Nombre: ${element.nombre}
+        Apellidos: ${element.apellidos}
+        Sexo: ${element.sexo}
+        Programa: ${obtenerNombrePrograma(element.programa)}
+        Trimestre: ${element.trimestre}
+        Dirección: ${element.direccion}
+        Estado del aprendiz: ${
+          element.estadoPrograma ? "APROBADO" : "NO APROBADO"
+        }
+        
+        -----------------------------------------------
+        `;
   });
-  if(userExisting){
-    errorAlert("El aprendiz ya esta registrado");
-      clearFor();
-  }
+
+  alert(`APRENDICES REGISTRADOS
+        ${listadoTotal}`);
 }
 
-function validatorLength(){
-  let documento = document.getElementById("documento").value;
-  if (documento.length > 10) {
-    errorAlert("Ha sobrepasado la longitud del dcumento");
-    document.getElementById("documento").value="";
-  }
-  return true;
-}
-
-
-function clearFor() {
-  document.getElementById("documento").value = "";
-  document.getElementById("nombre").value = "";
-  document.getElementById("apellidos").value = "";
-  document.getElementById("sexo").value = "";
-  document.getElementById("programa").value = "";
-  document.getElementById("trimestre").value = "";
-  document.getElementById("direccion").value = "";
-}
-
-// actualizar Aprendices.
+// Buscar Aprendices.
 function ActualizarDatosAprendiz() {
   // Aprendiz por busqueda de documento
   let posicionSeleccionada = true;
@@ -184,7 +223,7 @@ function ActualizarDatosAprendiz() {
   }
 }
 
-// Eliminar aprendices
+// Eliminar un usuario e arreglo.
 function EliminarDatosAprendiz() {
   if (ListadoAprendices.length < 1) {
     alert("No tienes aprendices registrados");
@@ -242,4 +281,44 @@ function AnularAprendiz() {
       ListadoAprendices[posicion].estadoPrograma = false;
     }
   }
+}
+
+
+
+
+
+// METODOS DEL PROGRAMA
+
+// Retorno de listado de aprendicez
+function listadoPrograma() {
+  let programas = "";
+  for (let i = 0; i < ListadoProgramas.length; i++) {
+    programas += `Código: ${ListadoProgramas[i].codigo} - Nombre :${ListadoProgramas[i].nombre}\n`;
+  }
+  return programas;
+}
+
+// Impresion del nombrel programa
+function obtenerNombrePrograma(id){
+
+  // Retorno  por código del programa
+  let nombrePrograma;
+  ListadoProgramas.forEach(element=>{
+    if(id == element.codigo){
+      nombrePrograma = element.nombre
+    }
+  })
+  return nombrePrograma
+ 
+  // Retorno por posición del programa en el arreglo
+  // return ListadoProgramas[id].nombre;
+}
+
+// Arrancamos el proyecto
+// start();
+
+
+
+function guardarDatos(){
+  alert("Hola Mundo");
 }

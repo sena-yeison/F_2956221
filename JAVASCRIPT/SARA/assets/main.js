@@ -8,6 +8,9 @@ function successAlert (nombre) {
         timer: 1500
       });
 }
+
+
+
 //  Funcion de error
 function errorAlert(mensaje){
     Swal.fire({
@@ -15,6 +18,6 @@ function errorAlert(mensaje){
         title: "Oops...",
         text: "Lo sentimos! "+mensaje,
         showConfirmButton:false,
-        timer:1000
+        timer:2000
       });
 }

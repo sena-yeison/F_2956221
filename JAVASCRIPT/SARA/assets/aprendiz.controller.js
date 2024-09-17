@@ -20,9 +20,9 @@ function listadoTotalAprendices() {
                         </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary">Ver</button>
-                                <button type="button" class="btn btn-success">Editar</button>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
+                                <button onclick="verDatosAprendiz(${index}, 1)" data-bs-toggle="modal" data-bs-target="#actualizacionAprendiz" type="button" class="btn btn-primary">Ver</button>
+                                <button data-bs-toggle="modal" data-bs-target="#actualizacionAprendiz" type="button" class="btn btn-success">Editar</button>
+                                <button onclick="EliminarDatosAprendiz(${index})" type="button" class="btn btn-danger">Eliminar</button>
                               </div>
                         </td>`;
 
@@ -33,7 +33,16 @@ function listadoTotalAprendices() {
 listadoTotalAprendices();
 
 
-
+function verDatosAprendiz(id, process){
+    let documento = document.getElementById("documentoVer").value = ListadoAprendices[id].documento;
+    let nombre = document.getElementById("nombreVer").value  = ListadoAprendices[id].nombre;
+    let apellidos = document.getElementById("apellidosVer").value  = ListadoAprendices[id].apellidos;
+    let sexo = document.getElementById("sexoVer").value  = ListadoAprendices[id].sexo;
+    let programa = document.getElementById("programaVer").value  = ListadoAprendices[id].programa;
+    let trimestre = document.getElementById("trimestreVer").value  = ListadoAprendices[id].trimestre;
+    let direccion = document.getElementById("direccionVer").value  = ListadoAprendices[id].direccion;
+    // let estadoPrograma = false;
+}
 
 
 // Registro de aprendiz
@@ -61,7 +70,7 @@ function RegistroAprendiz() {
         estadoPrograma
       };
       ListadoAprendices.push(datosAprendiz);
-      successAlert("Aprendiz");
+      successAlertRegister("Aprendiz");
       clearFor();
       listadoTotalAprendices();
   }
@@ -184,35 +193,25 @@ function ActualizarDatosAprendiz() {
   }
 }
 
+
+
+
+
+
+
 // Eliminar aprendices
-function EliminarDatosAprendiz() {
-  if (ListadoAprendices.length < 1) {
-    alert("No tienes aprendices registrados");
-  } else {
-    let documento = prompt("Ingrese el documento del aprendiz a actualizar.");
-    let i = 0,
-      posicion = 0;
-    let dataUsuarios = " Código  |  Documento    |   Nombre y apellidos \n";
-    ListadoAprendices.forEach((element) => {
-      if (documento == element.documento) {
-        dataUsuarios += `     ${i}    |    ${element.documento}   |   ${element.nombre} ${element.apellidos}`;
-        posicion = i;
-      }
-      i++;
-    });
-
-    alert(dataUsuarios);
-    let respuesta = parseInt(
-      prompt(`¿Estás seguro de eliminar al aprendíz?
-      1. Si
-      2. No`)
-    );
-
-    if (respuesta == 1) {
-      ListadoAprendices.splice(posicion, 1);
-    }
-  }
+function EliminarDatosAprendiz(id) {
+      let nombre = ListadoAprendices[id].nombre
+      ListadoAprendices.splice(id, 1);
+      successAlertDelete(nombre)
+      listadoTotalAprendices();
 }
+
+
+
+
+
+
 
 // Inactivar al usuario
 function AnularAprendiz() {

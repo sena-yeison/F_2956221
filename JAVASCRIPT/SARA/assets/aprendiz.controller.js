@@ -1,6 +1,33 @@
 // Defino los arreglos
-let ListadoAprendices = [];
+let ListadoAprendices = [
+  {
+    documento:"1051455522",
+    nombre:"Juan Esteban",
+    apellidos: "Quintero Perez",
+    sexo: "Masculino",
+    programa: "ADSO",
+    trimestre: 2,
+    direccion:"Medellín, Colombia",
+    estadoPrograma: true
+  }
+];
 let ListadoProgramas = [{ codigo: 133241242, nombre: "ADSO" }];
+
+
+
+function start(){
+  let userLogin = localStorage.getItem('acces');
+  userLogin = JSON.parse(userLogin);
+
+  console.log(userLogin)
+
+  let nombre = document.getElementById('nameUser')
+  nombre.innerHTML = `${userLogin.nombre} ${userLogin.apellidos}`;
+  let img = document.getElementById('imagenPerfil')
+  // console.log(img)
+  // listadoTotalAprendices();
+
+}
 
 // Listado de aprendiz
 function listadoTotalAprendices() {
@@ -30,7 +57,7 @@ function listadoTotalAprendices() {
   });
 }
 
-listadoTotalAprendices();
+
 
 
 function verDatosAprendiz(id, process){
@@ -46,7 +73,7 @@ function verDatosAprendiz(id, process){
 
 
 // Registro de aprendiz
-function RegistroAprendiz() {
+function RegistroAprendizHome() {
   if (ListadoProgramas.length < 1) {
     errorAlert("No tienes programas registrados");
   } else {

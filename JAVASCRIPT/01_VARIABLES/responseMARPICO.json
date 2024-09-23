@@ -1,0 +1,398 @@
+[
+    {
+        "jerarquia": "3000100001",
+        "nombre": "Antiestrés",
+        "categoria": "30001",
+        "nombre_categoria": "Antiestrés"
+    },
+    {
+        "jerarquia": "3000300004",
+        "nombre": "Botellas Deportivas Plásticas",
+        "categoria": "30003",
+        "nombre_categoria": "Bebidas"
+    },
+    {
+        "jerarquia": "3000300002",
+        "nombre": "Botellas en Aluminio",
+        "categoria": "30003",
+        "nombre_categoria": "Bebidas"
+    },
+    {
+        "jerarquia": "3000300006",
+        "nombre": "Mugs y Vasos Metálicos",
+        "categoria": "30003",
+        "nombre_categoria": "Bebidas"
+    },
+    {
+        "jerarquia": "3000300007",
+        "nombre": "Termos",
+        "categoria": "30003",
+        "nombre_categoria": "Bebidas"
+    },
+    {
+        "jerarquia": "3000900001",
+        "nombre": "Accesorios de Escritorio",
+        "categoria": "30009",
+        "nombre_categoria": "Oficina"
+    },
+    {
+        "jerarquia": "3000300008",
+        "nombre": "Vasos Plásticos y Ecológicos",
+        "categoria": "30003",
+        "nombre_categoria": "Bebidas"
+    },
+    {
+        "jerarquia": "3000300001",
+        "nombre": "Botellas en Acero",
+        "categoria": "30003",
+        "nombre_categoria": "Bebidas"
+    },
+    {
+        "jerarquia": "3000200001",
+        "nombre": "Bar",
+        "categoria": "30002",
+        "nombre_categoria": "Bar"
+    },
+    {
+        "jerarquia": "3000800010",
+        "nombre": "Accesorios de Hogar",
+        "categoria": "30008",
+        "nombre_categoria": "Hogar y Estilos de Vida"
+    },
+    {
+        "jerarquia": "3000400001",
+        "nombre": "Bolsos de Mano",
+        "categoria": "30004",
+        "nombre_categoria": "Bolsos"
+    },
+    {
+        "jerarquia": "3000400008",
+        "nombre": "Tula, Morral",
+        "categoria": "30004",
+        "nombre_categoria": "Bolsos"
+    },
+    {
+        "jerarquia": "3000400005",
+        "nombre": "Morrales",
+        "categoria": "30004",
+        "nombre_categoria": "Bolsos"
+    },
+    {
+        "jerarquia": "3000400006",
+        "nombre": "Neveras Loncheras",
+        "categoria": "30004",
+        "nombre_categoria": "Bolsos"
+    },
+    {
+        "jerarquia": "3000400003",
+        "nombre": "Manos Libres",
+        "categoria": "30004",
+        "nombre_categoria": "Bolsos"
+    },
+    {
+        "jerarquia": "3000400002",
+        "nombre": "Canguros",
+        "categoria": "30004",
+        "nombre_categoria": "Bolsos"
+    },
+    {
+        "jerarquia": "3000400004",
+        "nombre": "Maletines de Mensajería y Ejecutivos",
+        "categoria": "30004",
+        "nombre_categoria": "Bolsos"
+    },
+    {
+        "jerarquia": "3001400004",
+        "nombre": "Maletas y Estuches de Viaje",
+        "categoria": "30014",
+        "nombre_categoria": "Viajes, Recreación y Deportes"
+    },
+    {
+        "jerarquia": "3001400005",
+        "nombre": "Maletines Deportivos",
+        "categoria": "30014",
+        "nombre_categoria": "Viajes, Recreación y Deportes"
+    },
+    {
+        "jerarquia": "3000500006",
+        "nombre": "Estuches de Regalo",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000500002",
+        "nombre": "Bolígrafos Ecológicos",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000500004",
+        "nombre": "Bolígrafos Plásticos",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000500009",
+        "nombre": "Resaltadores",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000500007",
+        "nombre": "Lápices, Colores y Crayolas",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000500003",
+        "nombre": "Bolígrafos Metálicos",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000500001",
+        "nombre": "Bolígrafos con Resaltador",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000500005",
+        "nombre": "Boligrafos en Aluminio",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3000600001",
+        "nombre": "Gorras",
+        "categoria": "30006",
+        "nombre_categoria": "Gorras"
+    },
+    {
+        "jerarquia": "3000700002",
+        "nombre": "Herramienteros",
+        "categoria": "30007",
+        "nombre_categoria": "Herramientas, Linternas y Llaveros"
+    },
+    {
+        "jerarquia": "3000700005",
+        "nombre": "Llaveros",
+        "categoria": "30007",
+        "nombre_categoria": "Herramientas, Linternas y Llaveros"
+    },
+    {
+        "jerarquia": "3000700001",
+        "nombre": "Cintas Métricas",
+        "categoria": "30007",
+        "nombre_categoria": "Herramientas, Linternas y Llaveros"
+    },
+    {
+        "jerarquia": "3000900008",
+        "nombre": "Identificadores - Oficina",
+        "categoria": "30009",
+        "nombre_categoria": "Oficina"
+    },
+    {
+        "jerarquia": "3000700004",
+        "nombre": "Linternas",
+        "categoria": "30007",
+        "nombre_categoria": "Herramientas, Linternas y Llaveros"
+    },
+    {
+        "jerarquia": "3000700006",
+        "nombre": "Llaveros con Linterna",
+        "categoria": "30007",
+        "nombre_categoria": "Herramientas, Linternas y Llaveros"
+    },
+    {
+        "jerarquia": "3000800011",
+        "nombre": "Accesorios de Mascota",
+        "categoria": "30008",
+        "nombre_categoria": "Hogar y Estilos de Vida"
+    },
+    {
+        "jerarquia": "3000800009",
+        "nombre": "Accesorios de Cocina",
+        "categoria": "30008",
+        "nombre_categoria": "Hogar y Estilos de Vida"
+    },
+    {
+        "jerarquia": "3000800012",
+        "nombre": "Accesorios de Mercado",
+        "categoria": "30008",
+        "nombre_categoria": "Hogar y Estilos de Vida"
+    },
+    {
+        "jerarquia": "3001200005",
+        "nombre": "Relojes",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3000900003",
+        "nombre": "Libretas Ecológicas",
+        "categoria": "30009",
+        "nombre_categoria": "Oficina"
+    },
+    {
+        "jerarquia": "3000900004",
+        "nombre": "Libretas Plásticas",
+        "categoria": "30009",
+        "nombre_categoria": "Oficina"
+    },
+    {
+        "jerarquia": "3000900005",
+        "nombre": "Memos y Adhesivos",
+        "categoria": "30009",
+        "nombre_categoria": "Oficina"
+    },
+    {
+        "jerarquia": "3000900002",
+        "nombre": "Calculadoras",
+        "categoria": "30009",
+        "nombre_categoria": "Oficina"
+    },
+    {
+        "jerarquia": "3000900007",
+        "nombre": "Tarjeteros y Monederos",
+        "categoria": "30009",
+        "nombre_categoria": "Oficina"
+    },
+    {
+        "jerarquia": "3000500008",
+        "nombre": "Portaminas",
+        "categoria": "30005",
+        "nombre_categoria": "Escritura"
+    },
+    {
+        "jerarquia": "3001000010",
+        "nombre": "Paraguas Golf",
+        "categoria": "30010",
+        "nombre_categoria": "Paraguas e Impermeables"
+    },
+    {
+        "jerarquia": "3001000011",
+        "nombre": "Paraguas Mini",
+        "categoria": "30010",
+        "nombre_categoria": "Paraguas e Impermeables"
+    },
+    {
+        "jerarquia": "3001000008",
+        "nombre": "Impermeables",
+        "categoria": "30010",
+        "nombre_categoria": "Paraguas e Impermeables"
+    },
+    {
+        "jerarquia": "3001000009",
+        "nombre": "Paraguas Fashion",
+        "categoria": "30010",
+        "nombre_categoria": "Paraguas e Impermeables"
+    },
+    {
+        "jerarquia": "3001100002",
+        "nombre": "Cuidado Personal",
+        "categoria": "30011",
+        "nombre_categoria": "Salud y Belleza"
+    },
+    {
+        "jerarquia": "3001100005",
+        "nombre": "Pastilleros",
+        "categoria": "30011",
+        "nombre_categoria": "Salud y Belleza"
+    },
+    {
+        "jerarquia": "3001100004",
+        "nombre": "Limas y Manicure",
+        "categoria": "30011",
+        "nombre_categoria": "Salud y Belleza"
+    },
+    {
+        "jerarquia": "3001100003",
+        "nombre": "Especializados en Salud",
+        "categoria": "30011",
+        "nombre_categoria": "Salud y Belleza"
+    },
+    {
+        "jerarquia": "3001200009",
+        "nombre": "Audífonos",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001200007",
+        "nombre": "Accesorios para Móviles",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001200011",
+        "nombre": "Accesorios para Automóvil",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001200002",
+        "nombre": "Altavoz",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001200012",
+        "nombre": "Cables y Adaptadores de Carga",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001200003",
+        "nombre": "Hubs",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001200004",
+        "nombre": "Pilas Power Bank",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001200001",
+        "nombre": "Accesorios de Computador",
+        "categoria": "30012",
+        "nombre_categoria": "Tecnología"
+    },
+    {
+        "jerarquia": "3001300001",
+        "nombre": "USB",
+        "categoria": "30013",
+        "nombre_categoria": "USB"
+    },
+    {
+        "jerarquia": "3001400006",
+        "nombre": "Recreación",
+        "categoria": "30014",
+        "nombre_categoria": "Viajes, Recreación y Deportes"
+    },
+    {
+        "jerarquia": "3001400002",
+        "nombre": "Accesorios de Viaje",
+        "categoria": "30014",
+        "nombre_categoria": "Viajes, Recreación y Deportes"
+    },
+    {
+        "jerarquia": "3001400007",
+        "nombre": "Sillas",
+        "categoria": "30014",
+        "nombre_categoria": "Viajes, Recreación y Deportes"
+    },
+    {
+        "jerarquia": "3001400008",
+        "nombre": "Deportes",
+        "categoria": "30014",
+        "nombre_categoria": "Viajes, Recreación y Deportes"
+    },
+    {
+        "jerarquia": "3001400003",
+        "nombre": "Gafas",
+        "categoria": "30014",
+        "nombre_categoria": "Viajes, Recreación y Deportes"
+    }
+]
